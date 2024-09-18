@@ -1,0 +1,24 @@
+Data:
+  name: "DEL"
+  training:
+    root_path: "/data1/regina/negtm/train_388DELs"
+  prediction:
+    root_path: "/data1/regina/negtm/pred3BB_253_"
+
+Train:
+  logging_dir_name: "logging"
+  weights_path: "/data1/regina/negtm/weights"
+  weights_name: "best_weights-v12"
+  max_epochs: 100
+  lr: 0.001
+  log_file: "/data1/regina/negtm/pred3BB_253_/log_file"
+  log_level: 10
+
+Model:
+  batch_size: 10000
+  vector_dim: 512
+  num_conv_layers: 5
+  num_gtm_nodes: 1681
+  num_reactions: 29
+  bbs_pyg_path: "/data1/regina/negtm/train_388DELs/processed/DEL_bbs.pt"
+  bbs_embed_path: "/data1/regina/negtm/train_388DELs/processed/bbs_embeddings.pt"

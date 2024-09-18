@@ -1,0 +1,26 @@
+[Data]
+name = "DEL"
+
+[Data.training]
+root_path = "./train_388DELs"
+
+[Data.prediction]
+root_path = "./pred3BB_253_"
+
+[Train]
+logging_dir_name = "logging"
+weights_path = "/train_388DELs_mixed_precision/weights"
+weights_name = "best_weights-v12"
+max_epochs = 100
+lr = 0.001
+log_file = "/train_388DELs_mixed_precision/pred3BB_253_/log_file"
+log_level = 10
+
+[Model]
+batch_size = 10000
+vector_dim = 512
+num_conv_layers = 5
+num_gtm_nodes = 1681
+num_reactions = 29
+bbs_pyg_path = "/train_388DELs_mixed_precision/processed/DEL_bbs.pt"
+bbs_embed_path = "/train_388DELs_mixed_precision/processed/bbs_embeddings.pt"
